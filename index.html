@@ -591,12 +591,41 @@
     nav { padding: 1rem 1.5rem; }
     .nav-links { display: none; }
     #hero { padding: 6rem 1.5rem 3rem; }
-    .stats-strip { padding: 2rem 1.5rem; }
+    .stats-strip { padding: 2rem 1.5rem; flex-wrap: wrap; gap: 1.5rem; }
+    .stat { min-width: 120px; border-right: none; border-bottom: 0.5px solid rgba(255,255,255,0.1); padding-bottom: 1.5rem; }
+    .stat:last-child { border-bottom: none; }
     section { padding: 4rem 1.5rem; }
     .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     .form-row { grid-template-columns: 1fr; }
     footer { padding: 1.5rem; flex-direction: column; text-align: center; }
+    .footer-links { justify-content: center; flex-wrap: wrap; }
+    .hero-cta { flex-direction: column; }
+    .btn-primary, .btn-outline { text-align: center; justify-content: center; }
+    .exp-header { flex-direction: column; gap: 0.5rem; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .agencies-grid { grid-template-columns: 1fr; }
+    h1.hero-name { font-size: 3rem; }
+    /* WhatsApp button — move up slightly so it clears mobile browser bar */
+    a[href*="wa.me"] { bottom: 4.5rem !important; }
+    .wa-pulse { bottom: 4.5rem !important; }
+  }
+
+  /* Services / Certs responsive grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  @media (max-width: 768px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    #portfolio { padding: 4rem 1.5rem !important; }
+    #services { padding: 4rem 1.5rem !important; }
+    #clients { padding: 4rem 1.5rem !important; }
   }
 </style>
 </head>
@@ -611,6 +640,7 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#clients">Clients</a></li>
     <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Work</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -887,10 +917,124 @@
 </section>
 
 
+
+<!-- PORTFOLIO -->
+<section id="portfolio" style="background:#FFFFFF; padding:6rem 4rem;">
+  <div class="section-label reveal">Sample Work</div>
+  <h2 class="section-title reveal">Projects &amp; campaign highlights.</h2>
+  <p style="margin-top:1rem;font-size:0.95rem;font-weight:400;color:#444;line-height:1.7;max-width:600px;" class="reveal">A selection of campaigns, growth projects, and digital media work delivered across Bangladesh's leading brands.</p>
+
+  <div style="margin-top:3rem; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.5rem;">
+
+    <!-- Card 1 -->
+    <div class="reveal" style="background:#F5F5F5;border:0.5px solid #CCCCCC;border-radius:0.4rem;overflow:hidden;transition:transform 0.2s,border-color 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#333'" onmouseout="this.style.transform='';this.style.borderColor='#CCCCCC'">
+      <div style="background:#0A0A0A;height:140px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
+        <div style="font-size:3rem;">📱</div>
+        <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#fff,#555);"></div>
+      </div>
+      <div style="padding:1.5rem;">
+        <div style="font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:#555;margin-bottom:0.5rem;">Digital Media · 2023</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:#000;margin-bottom:0.6rem;">Grameenphone Programmatic Campaign</div>
+        <div style="font-size:0.85rem;color:#444;line-height:1.7;margin-bottom:1rem;">Full-funnel programmatic and GDN campaign strategy delivered through Mindshare, driving brand awareness and digital reach for GP's key product lines.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+          <span style="font-size:0.72rem;background:#E8E8E8;color:#111;padding:0.2rem 0.6rem;border-radius:2rem;">Programmatic</span>
+          <span style="font-size:0.72rem;background:#E8E8E8;color:#111;padding:0.2rem 0.6rem;border-radius:2rem;">GDN</span>
+          <span style="font-size:0.72rem;background:#E8E8E8;color:#111;padding:0.2rem 0.6rem;border-radius:2rem;">Mindshare</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="reveal" style="background:#F5F5F5;border:0.5px solid #CCCCCC;border-radius:0.4rem;overflow:hidden;transition:transform 0.2s,border-color 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#333'" onmouseout="this.style.transform='';this.style.borderColor='#CCCCCC'">
+      <div style="background:#1A1A1A;height:140px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
+        <div style="font-size:3rem;">📈</div>
+        <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#fff,#555);"></div>
+      </div>
+      <div style="padding:1.5rem;">
+        <div style="font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:#555;margin-bottom:0.5rem;">Business Development · 2022–2025</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:#000;margin-bottom:0.6rem;">INFOSTATION — 3 Crore Annual Revenue</div>
+        <div style="font-size:0.85rem;color:#444;line-height:1.7;margin-bottom:1rem;">Led sales team and new business pipeline, converting agency leads from Mindshare, Magnito, Webable and ADA — growing and sustaining 3 crore BDT in yearly revenue.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+          <span style="font-size:0.72rem;background:#E8E8E8;color:#111;padding:0.2rem 0.6rem;border-radius:2rem;">Sales Leadership</span>
+          <span style="font-size:0.72rem;background:#E8E8E8;color:#111;padding:0.2rem 0.6rem;border-radius:2rem;">Revenue Growth</span>
+          <span style="font-size:0.72rem;background:#E8E8E8;color:#111;padding:0.2rem 0.6rem;border-radius:2rem;">B2B</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="reveal" style="background:#F5F5F5;border:0.5px solid #CCCCCC;border-radius:0.4rem;overflow:hidden;transition:transform 0.2s,border-color 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#333'" onmouseout="this.style.transform='';this.style.borderColor='#CCCCCC'">
+      <div style="background:#111;height:140px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
+        <div style="font-size:3rem;">🎯</div>
+        <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#fff,#555);"></div>
+      </div>
+      <div style="padding:1.5rem;">
+        <div style="font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:#555;margin-bottom:0.5rem;">Rich Media · INSIGHTERS</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:#000;margin-bottom:0.6rem;">Rich Media Innovation — 85× Sales Impact</div>
+        <div style="font-size:0.85rem;color:#444;line-height:1.7;margin-bottom:1rem;">Introduced new-format rich media advertising concepts to the Bangladesh market, achieving 85× sales impact growth. Delivered for TK Group, IDLC, and Ifad Group.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+          <span style="font-size:0.72rem;background:#E8E8E8;color:#111;padding:0.2rem 0.6rem;border-radius:2rem;">Rich Media</span>
+          <span style="font-size:0.72rem;background:#E8E8E8;color:#111;padding:0.2rem 0.6rem;border-radius:2rem;">85× Growth</span>
+          <span style="font-size:0.72rem;background:#E8E8E8;color:#111;padding:0.2rem 0.6rem;border-radius:2rem;">Innovation</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="reveal" style="background:#F5F5F5;border:0.5px solid #CCCCCC;border-radius:0.4rem;overflow:hidden;transition:transform 0.2s,border-color 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#333'" onmouseout="this.style.transform='';this.style.borderColor='#CCCCCC'">
+      <div style="background:#0A0A0A;height:140px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
+        <div style="font-size:3rem;">🚀</div>
+        <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#fff,#555);"></div>
+      </div>
+      <div style="padding:1.5rem;">
+        <div style="font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:#555;margin-bottom:0.5rem;">Paid Social · Multiple Brands</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:#000;margin-bottom:0.6rem;">Facebook &amp; Social Campaign Management</div>
+        <div style="font-size:0.85rem;color:#444;line-height:1.7;margin-bottom:1rem;">End-to-end Facebook and paid social campaign planning and execution for Foodpanda, Unilever, Marico, Coke Studio Bangla and more — from brief to performance reporting.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+          <span style="font-size:0.72rem;background:#E8E8E8;color:#111;padding:0.2rem 0.6rem;border-radius:2rem;">Facebook Ads</span>
+          <span style="font-size:0.72rem;background:#E8E8E8;color:#111;padding:0.2rem 0.6rem;border-radius:2rem;">Paid Social</span>
+          <span style="font-size:0.72rem;background:#E8E8E8;color:#111;padding:0.2rem 0.6rem;border-radius:2rem;">Multi-brand</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="reveal" style="background:#F5F5F5;border:0.5px solid #CCCCCC;border-radius:0.4rem;overflow:hidden;transition:transform 0.2s,border-color 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#333'" onmouseout="this.style.transform='';this.style.borderColor='#CCCCCC'">
+      <div style="background:#1A1A1A;height:140px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
+        <div style="font-size:3rem;">🏍️</div>
+        <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#fff,#555);"></div>
+      </div>
+      <div style="padding:1.5rem;">
+        <div style="font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:#555;margin-bottom:0.5rem;">Operations · MUV.Asia 2017–2018</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:#000;margin-bottom:0.6rem;">Logistics Infrastructure Build-out</div>
+        <div style="font-size:0.85rem;color:#444;line-height:1.7;margin-bottom:1rem;">Built and scaled the entire logistics operation for ZP Technologies (MUV.Asia) across Dhaka — from zero to 200+ biker fleet, covering food, ride-sharing and delivery verticals.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+          <span style="font-size:0.72rem;background:#E8E8E8;color:#111;padding:0.2rem 0.6rem;border-radius:2rem;">Operations</span>
+          <span style="font-size:0.72rem;background:#E8E8E8;color:#111;padding:0.2rem 0.6rem;border-radius:2rem;">Team Building</span>
+          <span style="font-size:0.72rem;background:#E8E8E8;color:#111;padding:0.2rem 0.6rem;border-radius:2rem;">Scale-up</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 — CTA -->
+    <div class="reveal" style="background:#0A0A0A;border:0.5px solid #333;border-radius:0.4rem;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2.5rem;text-align:center;min-height:280px;">
+      <div style="font-size:2.5rem;margin-bottom:1rem;">💼</div>
+      <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:#FFFFFF;margin-bottom:0.75rem;">Have a project in mind?</div>
+      <div style="font-size:0.85rem;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:1.5rem;">I'm open to freelance campaigns, consulting engagements, and business partnerships.</div>
+      <a href="#contact" style="background:#FFFFFF;color:#0A0A0A;padding:0.75rem 1.75rem;border-radius:0.25rem;font-size:0.85rem;font-weight:600;text-decoration:none;letter-spacing:0.05em;transition:background 0.2s;" onmouseover="this.style.background='#DDDDDD'" onmouseout="this.style.background='#FFFFFF'">Let's Talk →</a>
+    </div>
+
+  </div>
+
+  <p style="margin-top:2rem;font-size:0.82rem;color:#888;text-align:center;" class="reveal">
+    💡 <em>Want to add screenshots or case study PDFs to any card? Just send them and I'll update the site.</em>
+  </p>
+</section>
+
 <!-- CERTIFICATIONS & SERVICES -->
 <section id="services" style="background: var(--cream);">
   <div style="max-width:1100px; margin:0 auto;">
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start;">
+    <div class="services-grid">
       <div>
         <div class="section-label reveal">Certifications</div>
         <h2 class="section-title reveal" style="font-size:clamp(1.6rem,3vw,2.2rem);">Continuously learning & growing.</h2>
@@ -1053,5 +1197,60 @@
     document.getElementById('form-success').style.display = 'block';
   }
 </script>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/8801727209669?text=Hi%20Stanley%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener"
+   title="Chat on WhatsApp"
+   style="
+     position:fixed; bottom:2rem; right:2rem; z-index:999;
+     width:58px; height:58px;
+     background:#25D366;
+     border-radius:50%;
+     display:flex; align-items:center; justify-content:center;
+     box-shadow:0 4px 20px rgba(37,211,102,0.45);
+     transition:transform 0.2s, box-shadow 0.2s;
+     text-decoration:none;
+   "
+   onmouseover="this.style.transform='scale(1.12)';this.style.boxShadow='0 6px 28px rgba(37,211,102,0.6)'"
+   onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 20px rgba(37,211,102,0.45)'">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="30" height="30" fill="#FFFFFF">
+    <path d="M16 2C8.28 2 2 8.28 2 16c0 2.47.67 4.79 1.83 6.78L2 30l7.45-1.79A13.94 13.94 0 0016 30c7.72 0 14-6.28 14-14S23.72 2 16 2zm0 25.5a11.44 11.44 0 01-5.83-1.6l-.42-.25-4.42 1.06 1.1-4.3-.27-.44A11.5 11.5 0 1116 27.5zm6.3-8.6c-.35-.17-2.06-1.01-2.38-1.13-.32-.11-.55-.17-.78.17-.23.35-.88 1.13-1.08 1.36-.2.23-.4.26-.74.09-.35-.17-1.47-.54-2.8-1.72-1.03-.92-1.73-2.05-1.93-2.4-.2-.34-.02-.53.15-.7.15-.15.35-.4.52-.6.17-.2.23-.34.35-.57.12-.23.06-.43-.03-.6-.09-.17-.78-1.88-1.07-2.57-.28-.67-.57-.58-.78-.59h-.66c-.23 0-.6.09-.91.43-.32.35-1.2 1.17-1.2 2.85s1.23 3.3 1.4 3.53c.17.23 2.42 3.7 5.87 5.04.82.32 1.46.51 1.96.65.82.22 1.57.19 2.16.12.66-.08 2.06-.84 2.35-1.66.29-.82.29-1.52.2-1.66-.08-.15-.31-.23-.66-.4z"/>
+  </svg>
+</a>
+
+<!-- Pulse ring animation -->
+<style>
+@keyframes whatsapp-pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  100% { transform: scale(1.55); opacity: 0; }
+}
+.wa-pulse {
+  position:fixed; bottom:2rem; right:2rem; z-index:998;
+  width:58px; height:58px;
+  border-radius:50%;
+  background:rgba(37,211,102,0.4);
+  animation: whatsapp-pulse 2s ease-out infinite;
+  pointer-events:none;
+}
+
+  /* Services / Certs responsive grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  @media (max-width: 768px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    #portfolio { padding: 4rem 1.5rem !important; }
+    #services { padding: 4rem 1.5rem !important; }
+    #clients { padding: 4rem 1.5rem !important; }
+  }
+</style>
+<div class="wa-pulse"></div>
+
 </body>
 </html>
